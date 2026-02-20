@@ -531,57 +531,6 @@ body {
     border-radius: 16px;
 }
 
-/* ========== ФУТЕР ========== */
-
-/*.footer {
-    background: rgba(148, 138, 139, 0.25);
-    padding: 28px 160px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.footer-logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #2b1408;
-}
-
-.footer-col h4 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.footer-col a {
-    display: block;
-    font-size: 14px;
-    font-weight: 300;
-    color: black;
-    text-decoration: none;
-    margin-bottom: 8px;
-}
-
-.footer-social-row {
-    display: flex;
-    gap: 10px;
-    margin-top: 8px;
-}
-
-.footer-social-icon {
-    width: 33px;
-    height: 33px;
-    background: #2b1408;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-}*/
 .work_mesto .map {
     width: 545px;
     height: 600px;
@@ -596,7 +545,7 @@ body {
     font-weight: 300;
 }
 
-/* ========== ОБНОВЛЕННЫЙ НИЗ САЙТА ========== */
+
 
 .container {
     max-width: 1120px;
@@ -620,7 +569,7 @@ body {
 }
 
 .work_mesto__text h1 {
-    color: #2b1408; /* Цвет из вашего бренда */
+    color: #2b1408; 
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
     font-size: 28px;
@@ -731,7 +680,11 @@ footer p {
 
 @media only screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 3) {
 
-    /* Общие отступы — делаем меньше и симметричнее */
+
+    body {
+        padding: 0;
+    }
+
     .header,
     .hero,
     .sweets,
@@ -741,53 +694,53 @@ footer p {
     .process,
     .reviews,
     .blog,
-    .location,
     .work_mesto,
     .block_order {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 
+    /* Шапка */
     .header {
-        padding: 12px 20px;
+        padding: 12px 16px;
         flex-wrap: wrap;
-        gap: 12px;
+        justify-content: space-between;
+        gap: 8px;
     }
 
     .nav {
-        display: none;               /* обычно прячут полностью */
+        display: none;          
     }
 
     .logo {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .btn-call {
-        padding: 10px 20px;
+        padding: 8px 16px;
         font-size: 13px;
+        white-space: nowrap;
     }
 
-    /* Герой — почти всегда стек в колонку */
+    /* Герой */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px 60px;
-        gap: 32px;
+        padding: 32px 16px 48px;
+        gap: 28px;
     }
 
     .hero-text h1 {
-        font-size: 36px;
+        font-size: 32px;
         line-height: 1.2;
-        margin-bottom: 20px;
     }
 
     .hero-text p {
-        font-size: 17px;
-        max-width: none;
+        font-size: 16px;
     }
 
     .hero-image {
-        display: none;               /* чаще всего скрывают на узких экранах */
+        display: none;
     }
 
     /* Гриды → одна колонка */
@@ -796,115 +749,133 @@ footer p {
     .reviews-grid,
     .blog-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
     }
 
     .sweet-card img,
     .sweet-card-bottom {
         width: 100%;
-        max-width: 360px;
-        border-radius: 36px;
+        border-radius: 32px;
     }
 
-    .sweet-card-bottom {
-        margin-top: -20px;
-        padding: 18px 24px;
-    }
-
+    /* Почему мы */
     .why-card {
-        padding: 28px 20px;
-        border-radius: 48px;
-        min-height: auto;
+        padding: 24px 16px;
+        border-radius: 40px;
     }
 
     .why-card img {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
     }
 
-    /* Процесс заказа */
+    /* Процесс */
     .process-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 20px;
     }
 
     .step {
-        padding: 24px 20px;
-        border-radius: 28px;
+        padding: 20px 16px;
+        border-radius: 24px;
     }
 
     /* CTA */
     .cta {
         flex-direction: column;
         text-align: center;
-        padding: 48px 20px;
-        gap: 40px;
+        gap: 32px;
+        padding: 40px 16px;
     }
 
     .cta img {
-        width: 240px;
-        height: auto;
-        border-radius: 32px;
+        width: 220px;
         align-self: center;
+        border-radius: 32px;
     }
 
-    /* Карта */
+    /* Где мы — САМЫЙ ПРОБЛЕМНЫЙ БЛОК */
     .work_mesto {
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
-        gap: 40px;
-        margin: 80px 0;
+        gap: 32px;
+        padding: 48px 16px;
+        margin: 0;
     }
 
+    .work_mesto__text {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .work_mesto__text h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .work_mesto__text p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    /* Карта — делаем responsive */
     .map {
         width: 100% !important;
-        height: 420px !important;
-        border-radius: 28px;
+        height: 400px !important;   /* или 420px — протестируйте */
+        border-radius: 16px;
+        overflow: hidden;
     }
 
-    /* Большой блок призыва */
+
+    /* Блок "Сделай заказ!" */
+    .block_order {
+        padding: 0 16px;
+        margin: 48px 0;
+    }
+
     .block9 {
-        margin: 0 16px;
-        padding: 36px 24px;
-        border-radius: 64px 24px 24px 24px;
+        padding: 32px 20px;
+        border-radius: 32px;
+        text-align: center;
+        background: #2b1408;           /* или ваш коричневый */
+        color: white;
     }
 
     .block9 h1 {
         font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    .block9 p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .btn-call3 {
+        padding: 12px 40px;
+        font-size: 15px;
     }
 
     /* Футер */
     footer {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
-        padding: 48px 20px 80px;
+        gap: 32px;
+        padding: 48px 16px 80px;
+    }
+
+    .sotseti {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
-
-/* Ещё более узкие экраны (на всякий случай — iPhone SE, старые модели и т.д.) */
-@media only screen and (max-width: 380px) {
-
-    .hero-text h1 {
-        font-size: 32px;
-    }
-
-    .section-title {
-        font-size: 32px;
-    }
-
-    .sweet-card img,
-    .sweet-card-bottom {
-        border-radius: 32px;
-    }
-
-    .map {
-        height: 380px !important;
-    }
-
-    .btn-dark, .btn-order, .btn-call, .btn-call3 {
-        padding: 12px 32px;
-        font-size: 14px;
-    }
+/* Ещё меньше — старые iPhone / узкие экраны */
+@media (max-width: 380px) {
+    .hero-text h1 { font-size: 28px; }
+    .section-title { font-size: 30px; }
+    .block9 h1 { font-size: 24px; }
+    .map { height: 360px !important; }
 }
